@@ -69,7 +69,7 @@ def add_cards():
             print(f"{choice(colors)} {new_number}")
             if new_number == "A":
                 new_number = 11
-            if new_number in black_jack:
+            elif new_number in black_jack:
                 new_number = 10
             insgesamt_own = insgesamt_own + new_number
             print(f"own value: {insgesamt_own}")
@@ -94,6 +94,10 @@ def dealer_add_cards():
     while insgesamt_dealer < 17:
         new_number_dealer = choice(numbers)
         print(f"{choice(colors)} {new_number_dealer}")
+        if new_number_dealer in black_jack:
+            new_number_dealer = 10
+        elif new_number_dealer == "A":
+            new_number_dealer = 11
         insgesamt_dealer = insgesamt_dealer + new_number_dealer
     if insgesamt_dealer > 21:
         print("win")
@@ -116,3 +120,5 @@ def comparison():
 
 
 own_cards()
+# A 2 werte gleichzeitig zuschreiben
+# einsätze einarbeiten
