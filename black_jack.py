@@ -120,5 +120,3 @@ def comparison():
 
 
 own_cards()
-# A 2 werte gleichzeitig zuschreiben
-# einsätze einarbeiten
